@@ -1,0 +1,34 @@
+.acordion-item {
+  transition: all 500ms linear;
+}
+
+.acordion-btn {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  outline: none;
+  transition: 3s;
+  width: 100%;
+  text-align: left;
+}
+
+.acordion-btn :hover {
+  background-color: #ccc;
+}
+
+.acordion-panel {
+  background-color: white;
+  padding: 20px;
+  overflow: hidden;
+  display: none;
+}
+
+ul {
+  width: 500px;
+}
+
+.active {
+  display: block;
+}
