@@ -1,0 +1,27 @@
+.saveFavoriteBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.form_box {
+  position: relative;
+  width: 169px;
+}
+
+.form {
+  display: flex;
+  margin: 0 auto;
+  width: 230px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+.inFavorite {
+  background-color: blue;
+  opacity: 0.7;
+}
