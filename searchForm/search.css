@@ -1,3 +1,7 @@
+body {
+  height: 100vh;
+}
+
 .saveFavoriteBtn {
   position: absolute;
   right: 0;
@@ -19,9 +23,18 @@ ul {
   list-style: none;
   display: flex;
   gap: 8px;
+  margin: 0;
+  padding: 0;
 }
 
 .inFavorite {
   background-color: blue;
   opacity: 0.7;
+}
+
+.form-container {
+  border: 2px solid red;
+  border-radius: 16px;
+  width: 250px;
+  margin: 0 auto;
 }
