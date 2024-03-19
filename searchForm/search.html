@@ -10,6 +10,10 @@ https://cdn.jsdelivr.net/npm/notiflix@3.2.7/src/notiflix.min.css
 "
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -21,11 +25,19 @@ https://cdn.jsdelivr.net/npm/notiflix@3.2.7/src/notiflix.min.css
         </div>
         <button type="submit">Search</button>
       </form>
-      <ul class="favorite_list"></ul>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <ul class="favorite_list"></ul>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </div>
     <script src="
 https://cdn.jsdelivr.net/npm/notiflix@3.2.7/dist/notiflix-aio-3.2.7.min.js
 "></script>
     <script src="./search.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

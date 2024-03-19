@@ -23,8 +23,9 @@ ul {
   list-style: none;
   display: flex;
   gap: 8px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  color: white;
 }
 
 .inFavorite {
@@ -35,6 +36,16 @@ ul {
 .form-container {
   border: 2px solid red;
   border-radius: 16px;
-  width: 250px;
+  width: 400px;
   margin: 0 auto;
+}
+
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after {
+  color: #fff;
+  font-size: 20px;
+}
+
+.swiper-wrapper {
+  padding: 10px 10px 10px 10px;
 }

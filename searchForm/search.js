@@ -62,3 +62,17 @@ function handleFavoriteClick(e) {
     btnAddFavorite();
   }
 }
+
+const swiper = new Swiper(".swiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  slidesPerView: 1,
+  loop: true,
+  createElements: true,
+  pagination: true,
+});
