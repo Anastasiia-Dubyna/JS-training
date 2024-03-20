@@ -6,6 +6,21 @@ const url =
   "https://d1vcy8ih94g58p.cloudfront.net/eyJrZXkiOiIyNzI2ODRcL2JGelNLZXdxR08wVkp5b3ZoNWJ0MzN3dFQzZ2lzcXlkQjlUREZnR2suanBlZyIsImJ1Y2tldCI6IndpcmVzdG9jay1vcmlnaW5hbC1wcm9kdWN0aW9uIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDI0LCJmaXQiOiJjb3ZlciJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJ3aXJlc3RvY2stb3JpZ2luYWwtcHJvZHVjdGlvbiIsImtleSI6IndhdGVybWFya3NcL3dhdGVybWFyay5wbmcifSwianBlZyI6eyJxdWFsaXR5Ijo4MH19fQ==?signature=6a4a791f7057aff473aa4e79f978c782cb0fc3e3a62f55a2eef06de41f3f6428";
 document.body.style = `background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(${url}) center fixed; background-size: cover`;
 
+const swiper = new Swiper(".text-slider", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  slidesPerView: 2,
+  loop: false,
+  createElements: true,
+  pagination: true,
+  centeredSlides: true,
+});
+
 const persistedFavorites = load("favorite") || [];
 createMarkup(persistedFavorites);
 
@@ -63,16 +78,4 @@ function handleFavoriteClick(e) {
   }
 }
 
-const swiper = new Swiper(".swiper", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  slidesPerView: 1,
-  loop: true,
-  createElements: true,
-  pagination: true,
-});
+swiper.update();

@@ -23,9 +23,10 @@ ul {
   list-style: none;
   display: flex;
   gap: 8px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   color: white;
+  text-align: center;
 }
 
 .inFavorite {
@@ -40,12 +41,22 @@ ul {
   margin: 0 auto;
 }
 
-.swiper .swiper-button-prev::after,
-.swiper .swiper-button-next::after {
-  color: #fff;
-  font-size: 20px;
+.wrapper {
+  width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
-.swiper-wrapper {
-  padding: 10px 10px 10px 10px;
+.text-slider {
+  height: 30px;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.text-slider__wrapper {
+  display: flex;
+  gap: 8px;
 }
