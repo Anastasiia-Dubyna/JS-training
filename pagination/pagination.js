@@ -1,6 +1,6 @@
 // selecting required element
 const element = document.querySelector(".pagination ul");
-let totalPages = 5;
+let totalPages = 10;
 let page = 1;
 
 //calling function with passing parameters and adding inside element which is ul tag
@@ -72,6 +72,7 @@ function createPagination(totalPages, page) {
     liTag += `<li class="last numb" data-page="${totalPages}"><span>${totalPages}</span></li>`;
   }
   if (page < totalPages) {
+    console.log(page);
     liTag += `<li class="btn next" data-page="${
       page + 1
     }"><span>Next <i class="fas fa-angle-right"></i></span></li>`;
@@ -82,10 +83,15 @@ function createPagination(totalPages, page) {
 }
 
 function handlePageClick(event) {
-  if (event.target.tagName === "LI") {
-    const newPage = event.target.dataset.page;
-    if (newPage) {
-      createPagination(totalPages, newPage);
-    }
+  if (event.target.nodeName === "UL") {
+    return;
+  }
+  const item = event.target.closest("[data-page]");
+  if (!item) {
+    return;
+  }
+  const newPage = item.dataset.page;
+  if (newPage) {
+    createPagination(totalPages, Number(newPage));
   }
 }
